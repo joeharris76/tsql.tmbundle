@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>name</key>
+        <string>T-SQL</string>
+        <key>uuid</key>
+        <string>8E743E0C-595D-4F9B-B6D2-95FD0B714492</string>
+    </dict>
+</plist>
