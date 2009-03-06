@@ -88,6 +88,12 @@
             </dict>
             <dict>
                 <key>name</key>
+                <string>constant.language.sql</string>
+                <key>match</key>
+                <string>(?i)\b(NULL|NOT NULL)\b</string>
+            </dict>
+            <dict>
+                <key>name</key>
                 <string>keyword.control.operator.sql</string>
                 <key>match</key>
                 <string>(?i)\b(AND|OR|NOT|IS|IN|EXISTS)\b</string>
@@ -102,13 +108,7 @@
                 <key>name</key>
                 <string>keyword.data.sql</string>
                 <key>match</key>
-                <string>(?i)\b(INSERT|INTO|DELETE|SELECT|FROM|WHERE|UNION|VALUES)\b</string>
-            </dict>
-            <dict>
-                <key>name</key>
-                <string>constant.language.sql</string>
-                <key>match</key>
-                <string>(?i)\b(NULL)\b</string>
+                <string>(?i)\b(INSERT|INTO|DELETE|SELECT|FROM|WHERE|UNION|VALUES|REFERENCES|PRIMARY KEY)\b</string>
             </dict>
             <dict>
                 <key>captures</key>
@@ -143,6 +143,40 @@
                 <string>meta.create-procedure.sql</string>
                 <key>match</key>
                 <string>(?i)(CREATE)\s+(PROCEDURE)\s+((?:(dbo)(\.))?\S+)</string>
+            </dict>
+            <dict>
+                <key>captures</key>
+                <dict>
+                    <key>2</key>
+                    <dict>
+                        <key>name</key>
+                        <string>support.type.sql</string>
+                    </dict>
+                    <key>4</key>
+                    <dict>
+                        <key>name</key>
+                        <string>support.constant.dbo.sql</string>
+                    </dict>
+                    <key>5</key>
+                    <dict>
+                        <key>name</key>
+                        <string>punctuation.delimiter.sql</string>
+                    </dict>
+                    <key>1</key>
+                    <dict>
+                        <key>name</key>
+                        <string>support.function.sql</string>
+                    </dict>
+                    <key>3</key>
+                    <dict>
+                        <key>name</key>
+                        <string>entity.name.function.sql</string>
+                    </dict>
+                </dict>
+                <key>name</key>
+                <string>meta.create-table.sql</string>
+                <key>match</key>
+                <string>(?i)(CREATE)\s+(TABLE)\s+((?:(dbo)(\.))?\S+)</string>
             </dict>
             <dict>
                 <key>name</key>
@@ -205,6 +239,7 @@
 \b(
     bigint|
     int|
+    integer|
     smallint|
     tinyint|
     bit|
