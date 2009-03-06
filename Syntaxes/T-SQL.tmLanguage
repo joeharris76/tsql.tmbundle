@@ -243,7 +243,7 @@
     smallint|
     tinyint|
     bit|
-    decimal|
+    (?:decimal(\()(\d+|\d+\s*,\s*\d+))|
     numeric|
     money|
     smallmoney|
