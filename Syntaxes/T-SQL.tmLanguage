@@ -108,7 +108,7 @@
                 <key>name</key>
                 <string>keyword.data.sql</string>
                 <key>match</key>
-                <string>(?i)\b(INSERT|INTO|DELETE|SELECT|FROM|WHERE|UNION|VALUES|REFERENCES|PRIMARY KEY)\b</string>
+                <string>(?i)\b(INSERT|INTO|DELETE|SELECT|FROM|WHERE|UNION|VALUES|REFERENCES|PRIMARY KEY|IDENTITY|DEFAULT)\b</string>
             </dict>
             <dict>
                 <key>captures</key>
@@ -261,6 +261,7 @@
     varbinary|
     image|
     cursor|
+    rowversion|
     sql_variant|
     timestamp|
     uniqueidentifier|
